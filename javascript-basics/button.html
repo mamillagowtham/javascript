@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>button</title>
+    </head>
+    <body>
+        <h1  id="head1">0</h1>
+        
+        <button onClick="likeFunction()">like</button>
+        <button onClick="unlikeFunction()">dislike</button>
+        <h1 id="tap">0</h1>
+        <button onclick="like()">submit</button>
+    </body>
+    <script>
+        let likes=0;
+       
+        function likeFunction()
+        {
+            likes++;
+            document.getElementById("head1").innerText = likes;
+        }
+        function unlikeFunction()
+        {
+            likes--;
+            document.getElementById("head1").innerText = likes;
+        }
+        
+
+    </script>
+    <script>
+         let count=0;
+        function like()
+        {
+          count++;
+          document.getElementById("tap").innerText=count;
+
+        }
+    </script>
+</html>
