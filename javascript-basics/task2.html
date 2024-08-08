@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>age qualification</title>
+    </head>
+    <body>
+        <input type="text" placeholder="enter age"  id="age" required/>
+        <button onclick="eligibilityCheck()">check eligibility</button>
+        <h1 id="dispaly">enter age here</h1>
+    </body>
+    <script>
+       
+        
+         function eligibilityCheck()
+        {
+            if(document.getElementById("age").value == 18)
+        {
+           
+            document.getElementById("dispaly").innerText="just eligible"
+        }
+        else if(document.getElementById("age").value >=18)
+        {
+            
+            document.getElementById("dispaly").innerText="eligible";
+
+        }
+        else{
+           
+            document.getElementById("dispaly").innerText="not eligible";
+        }
+      
+       
+        }
+      
+    </script>
+</html>
