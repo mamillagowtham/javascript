@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mouse</title>
+       <style>
+        div{
+            background-color: orange;
+            height: 100px;
+            width: 100px;
+        }
+       </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+    <script>
+        document.querySelector("div").addEventListener("mouseenter",Enter);
+        function Enter()
+        {
+            document.querySelector("div").style.backgroundColor="teal";
+          
+        }
+        
+        
+        document.querySelector("div").addEventListener("mouseleave",Leave);
+        function Leave()
+        {
+            document.querySelector("div").style.backgroundColor="orange"
+        }
+    </script>
+</html>
