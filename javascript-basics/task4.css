@@ -1,0 +1,14 @@
+div {
+    display: flex;
+    justify-content: space-around;
+}
+
+table th,td
+{
+    border: 1px solid black;
+}
+table
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}

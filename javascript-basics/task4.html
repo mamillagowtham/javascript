@@ -4,17 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./task4.css"
 </head>
 <body>
-     <h2>lhl</h2>
-    <label>name:</label>
-    <input type="text" id="name"></br>
-    <label>ph:no</label>
-    <input type="number" id="number">
+   <div>
+    <form>
+        <label>item name:</label>
+        <input type="text" id="item" placeholder="enter item name" />
+        <br/>
+        <label>quantity</label>
+        <input type="number" id="qty" placeholder="enter quantity"/>
+        <br/>
+        <label>priority</label>
+        <select id="pry">
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+        </select>
+        <br>
+       
+        <input type="submit"/>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>item name </th>
+                <th>quantity</th>
+                <th>priority</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+        
+
+    </form>
+   </div>
     
 </body>
-<script>
-    let name = document.querySelector("#name").value;
+<script src="./task4.js">
+   
     
 </script>
 
