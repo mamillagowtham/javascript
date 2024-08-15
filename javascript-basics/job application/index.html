@@ -8,7 +8,7 @@
         <div id="links">
             <div><a href="./index.html">home</a></div>
             <div><a href="./application.html">applied jobs</a></div>
-            <div><a >bookmarks</a></div>
+            <div><a href="./bookmark.html">bookmarks</a></div>
         </div>
         <form id="form">
             <h1>Enter your details here</h1>
@@ -28,7 +28,7 @@
 <script>
      document.querySelector("#form").addEventListener("submit",jobSubmit);
     let jobArr;
-    if(localStorage.getItem("jobList")!==null)
+    if(localStorage.getItem("jobList")!==null) // it is in a form of || operator,if  !=null (not empty) other wise jobArr = [];
    {
      jobArr= JSON.parse(localStorage.getItem("jobList"));
    }

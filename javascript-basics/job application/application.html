@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
     <div id="links">
         <div><a href="./index.html">home</a></div>
         <div><a href="./application.html">applied jobs</a></div>
-        <div><a >bookmarks</a></div>
+        <div><a href="./bookmark.html" >bookmarks</a></div>
     </div>
     <table border="1">
         <thead>
@@ -27,8 +32,8 @@
 </html>
 <script>
    let jobArr= JSON.parse(localStorage.getItem("jobList"));
-   let bookMarkArr = JSON.parse(localStorage.getItem("bookMark")) || [];
-   jobArr.forEach(function(element)
+   let bookMarkArr = JSON.parse(localStorage.getItem("bookMark")) || [];// it is in a form of if-else statement,if  !=null (not empty)
+   jobArr.forEach(function(element)                                   //retrive ,other wise bookMarkArr = [];  
    {
     let tr = document.createElement("tr");
     let td1 =document.createElement("td");
@@ -53,5 +58,7 @@
    {
     bookMarkArr.push(element)
     localStorage.setItem("bookMark",JSON.stringify(bookMarkArr));
+
+  
    }
 </script>
