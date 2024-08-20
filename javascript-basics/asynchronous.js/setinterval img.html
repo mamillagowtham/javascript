@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 500px;
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+   
+    <div id="container"></div>
+</body>
+
+</html>
+<script>
+    let images = ["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitna4hicrNQoBfTk6nlR3oldbeD86GGdWpN4S0MlsyG4h7HLRyT3ZFzRj-nCB8kWY46sHO5vGUCOBIcHgkzVNpoH5Os5B-x9YwRPqPsx80u6eFBK6KFkHSvw2IGhMuxfKR0dq5FJwhaw9D9TmYQFfkDVRK1wUg5kkGelcN2lW5B98vTiWh0z5f4pgIdTYJ/s1291/unshort-any-shor-web-site-address.jpeg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNyHIk7d_TwbMNVs55IzjPlnKBuXv_QZs01A&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcxJeRQpZ6Dku2NYKgwvSThboxqbhN2Pkk8g&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtVmynVy5wQSxejXUnuOLcw-on_AQRPQ_Dng&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV1DQYXOFn7-Juik1NILqMKb8cN3IL7blAZA&s"
+    ]
+
+    document.querySelector("#start").addEventListener("click",Start)
+    document.querySelector("#stop").addEventListener("click",stop)
+    let id;
+    function Start()
+    {
+        let slideimage = document.createElement("img")
+        let i = 0;
+        id = setInterval(function()
+    {
+        if(i==images.length)
+    {
+        i=0;
+    }
+      
+       slideimage.src = images[i++];
+
+       document.querySelector("#container").append(slideimage);
+
+
+    },1000)
+    }
+
+    function stop()
+    {
+        clearInterval(id);
+    }
+
+   
+
+</script>
