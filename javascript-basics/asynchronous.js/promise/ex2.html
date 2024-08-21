@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let raj_got_first_rank = true;
+    let promise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (true) {
+                resolve("he will get bike")
+            }
+            else {
+                reject("he didn't get anything")
+            }
+        }, 3000)
+    })
+
+    promise.then(function (resolve) {
+        console.log(resolve)
+        console.log("he will be very happy")
+    }).catch(function (error) {
+        console.log(error)
+    })
+</script>
+
+</html>
