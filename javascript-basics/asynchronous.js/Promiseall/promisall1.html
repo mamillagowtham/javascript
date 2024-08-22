@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promise.all</h1>
+</body>
+<script>
+    
+    let promise1= new Promise(function(resolve,reject){
+        setTimeout(function(){
+            resolve(500);
+        })
+
+    })
+    let promise2 = new Promise(function(resolve,reject)
+{
+    setTimeout(function(){
+        resolve(600);
+    })
+})
+let promise_array = [promise1,promise2];
+Promise.all(promise_array).then(function(fulfill){
+    console.log(fulfill)
+}).catch(function(error){
+    console.log(error)
+})
+
+</script>
+</html>
