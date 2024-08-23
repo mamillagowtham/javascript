@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>async</h1>
+</body>
+<script>
+    /* async function New()  // async will indicate there is a promise inside this function
+     {
+      return 1 //by default it is resolve    
+     }
+     New().then((resolve)=>alert(resolve)) //1.short hand notation in arrow function 2.if you complete it in single line don't need flowerbrasis.
+    */
+
+
+    async function Something() {
+        try {
+            let promise = new Promise(function (resolve,reject) {
+                setTimeout(function() {
+                    resolve(150);
+                }, 5000);
+                let result =  promise;
+                alert(result);
+            })
+
+        }
+        catch (error) {
+            console.log(error)
+        }
+
+    }
+    Something();
+
+</script>
+
+</html>
