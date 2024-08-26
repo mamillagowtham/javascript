@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    
+     #main{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 10px;
+     }
+
+     #center
+     {
+      display: flex;
+      justify-content: center;
+     }
+
+    
+   
+    
+  </style>
+</head>
+<body>
+  <div id="center">
+  <select id="population">
+    <option value="">select by population</option>
+    <option value="ASC">ASC</option>
+    <option value="DESC">DESC</option>
+  </select>
+  <select id="region">
+    <option value="">filter by region</option>
+    <option value="Asia">Asia</option>
+    <option value="Americas">Americas</option>
+    <option value="Antarctic">Antarctic</option>
+    <option value="Europe">Europe</option>
+    <option value="Africa">Africa</option>
+    <option value="Oceania">Oceania</option>
+  </select>
+  </div>
+ 
+  <div id="main">
+    <div id="block"></div>
+  </div>
+    
+</body>
+</html>
+<script>
+   async function Country()
+     {
+        try{
+          let result =  await fetch("https://restcountries.com/v3.1/all");
+          data =  await result.json();
+          
+          data.forEach(function(element)
+          {    
+            let image =  document.createElement("img")
+            image.src = element.flags.png;          
+            let h3= document.createElement("h3")
+            h3.innerText = "country :"+ element.name.common;
+            let p1= document.createElement("p")
+            p1.innerText= "population :"+ element.population;
+            let p2 =  document.createElement("p")
+            p2.innerText= "region :" + element.region;
+            let p3 = document.createElement("p")
+            p3.innerText= "capital :" + element.capital;
+
+            document.querySelector("#block").append(image,h3,p1,p2,p3)
+
+          });
+        }
+
+        catch(error)
+        {
+             console.log(error);
+        }
+        
+    }
+
+    Country()
+   
+ 
+
+   
+</script>
+
+
+
