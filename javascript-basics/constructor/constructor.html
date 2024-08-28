@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+// <script>
+    // console.log(this === window)
+
+//     function Constructor(firstname,surname)
+//     {
+//         this.firstname = firstname;
+//         this.lastname = surname;
+//     }
+//    let details =new Constructor("gowtham","mamilla");// new is mandatory in this constructor 
+
+//    console.log(details)
+
+// </script> 
+
+
+
+
+// <script>
+// // assigning a key and value pair to the object with the help of constructor.
+// //when ever assigning key&value pair to the object no need to write "new" to the function call
+// // call method 
+
+//  let  student1 = {
+//     name : "gowtham",
+//     ph : 6303055283,
+//     address : "vijayawada"
+// }
+
+// function Adding(id , qualifation)
+// {
+//     this.student_id = id;
+//     this.student_qualifation = qualifation;
+// }
+//       Adding.call(student1,5,"B.tech.");  //just add call method 
+//       console.log(student1); 
+// </script>
+
+
+
+
+
+// <script>
+//       // assigning a key and value pair to the object with the help of constructor.
+//     // apply method
+
+//     let  student1 = {
+//     name : "gowtham",
+//     ph : 6303055283,
+//     address : "vijayawada"
+// }
+// function Adding(id , qualifation)
+// {
+//     this.student_id = id;
+//     this.student_qualifation = qualifation;
+// }
+//       Adding.call(student1,[5,"B.tech."]);// pass arguments inside the array 
+//       console.log(student1); 
+//  </script>
+
+
+
+
+
+    <script>
+      // assigning a key and value pair to the object with the help of constructor.
+    // bind method
+
+    let  student1 = {
+    name : "gowtham",
+    ph : 6303055283,
+    address : "vijayawada"
+}
+
+function Adding(id , qualifation)
+{
+    this.student_id = id;
+    this.student_qualifation = qualifation;
+}
+      Adding.call(student1,5,"B.tech.");
+      Adding()                                //call the function seperatly 
+      console.log(student1); 
+ </script>
+  
+          
