@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>Document</title>
 </head>
 <body>
+    <h2>prototype</h2>
+   
     
 </body>
+<script>
+    //             Implement an inheritance model for four wheeler automobiles.
+    // Implement using both object.create() and constructor functions().
+    // Think of properties of what can be inherited.
+
+    let AutoMobile = {
+        wheels:4,
+        breaks:2,
+        steering:1
+       
+        }
+
+        let  fourWheeler = Object.create(AutoMobile)
+       console.log(fourWheeler.wheels);
+       console.log(fourWheeler.breaks);
+       console.log(fourWheeler.steering);
+       fourWheeler.car = "4 wheels"
+
+
+
+
+    
+</script>
 </html>

@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>Document</title>
 </head>
 <body>
-    <label>quantity</label>
-    <select>
-        <option value="low"></option>
-        <option value="high">high</option>
-    </select>
+    <h3>constructor Function prototype</h3>
+    
 </body>
+<script>
+    function Automobile()
+    {
+        this.Fourwheeler ="bus";
+      
+    }
+    Automobile.prototype.Fourwheeler = "car"
+    Automobile.prototype.Fourwheeler = "van"
+    Automobile.prototype.Fourwheeler = "mini bus"
+     new  Automobile()
+   console.log(Automobile)
+  
+</script>
 </html>
