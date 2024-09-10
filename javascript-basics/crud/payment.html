@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment page</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #navbar_page
+     { 
+        display: flex;
+        justify-content: space-between;
+       
+        background-color: black;
+        color: white;
+ }
+
+     #navbar_page a
+     {
+        color: white;
+     }
+
+     #options
+     {
+        display :flex;
+        gap: 20px;
+        position: absolute;
+        right:20px;       
+     }
+    </style>
+</head>
+
+<body>
+    <h1>payment page</h1>
+</body>
+</html>
+
+<script type = "module">
+
+    import {navbar,even} from "./component/navbar.js";
+
+    let navbar = document.getElementById("navbar");
+
+    navbar.innerHTML = navbar();  // it wil return html code
+</script>
